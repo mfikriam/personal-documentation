@@ -73,10 +73,20 @@ git commit
 
 <br>
 
-## Colors
+## Lists
 
-| Color | Syntax | Output |
-| --- | --- |--- |
-| HEX | `#0969DA` | #0969DA |
-| RGB | `rgb(9, 105, 218)` | rgb(9, 105, 218) |
-| HSL | `hsl(212, 92%, 45%)` | hsl(212, 92%, 45%) |
+```
+1. First item
+2. Second item
+3. Third item
+    1. Indented item
+    2. Indented item
+4. Fourth item
+```
+   
+1. First item
+2. Second item
+3. Third item
+    1. Indented item
+    2. Indented item
+4. Fourth item
