@@ -38,3 +38,45 @@
 ## Quoting
 
 ### Quoting Text
+
+You can quote text with `>`
+
+    text that is not a quote
+    > text that is a quote
+    >> text that is a nested quote
+
+text that is not a quote
+> text that is a quote
+>> text that is a nested quote
+
+### Quoting Code
+
+    You can use `example` for inline text for your code.
+
+    or you can use ``` for block of code
+
+    ```
+    git status
+    git add
+    git commit
+    ```
+
+You can use `example` for inline text for your code.
+
+or you can use ``` for block of code
+
+```
+git status
+git add
+git commit
+```
+
+<br>
+
+## Colors
+
+| Color | Syntax | Output |
+| --- | --- |--- |
+| HEX | `#0969DA` | #0969DA |
+| RGB | `rgb(9, 105, 218)` | rgb(9, 105, 218) |
+| HSL | `hsl(212, 92%, 45%)` | hsl(212, 92%, 45%) |
