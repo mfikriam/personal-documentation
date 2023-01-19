@@ -2,6 +2,37 @@
 
 ## Table of Contents
 
+1. [Headings](#headings)
+2. [Paragraphs \& Line Breaks](#paragraphs--line-breaks)
+3. [Styling Text](#styling-text)
+4. [Quoting](#quoting)
+   - [Quoting Text](#quoting-text)
+   - [Quoting Code](#quoting-code)
+   - [Syntax Highlighting](#syntax-highlighting)
+   - [Escaping Backticks](#escaping-backticks)
+5. [Lists](#lists)
+   - [Ordered Lists](#ordered-lists)
+   - [Unordered Lists](#unordered-lists)
+   - [Task Lists](#task-lists)
+6. [Images](#images)
+   - [Add Image](#add-image)
+   - [Change Image Size](#change-image-size)
+7. [Links](#links)
+   - [Create A Link](#create-a-link)
+   - [Adding Titles](#adding-titles)
+   - [URLs and Email Addresses](#urls-and-email-addresses)
+   - [Reference-style Links](#reference-style-links)
+   - [Footnotes](#footnotes)
+   - [Relative links](#relative-links)
+8. [Horizontal Rules](#horizontal-rules)
+9. [Using Emojis](#using-emojis)
+10. [Hiding content with comments](#hiding-content-with-comments)
+11. [Ignoring Markdown formatting](#ignoring-markdown-formatting)
+12. [Table](#table)
+    - [Creating Table](#creating-table)
+    - [Content Align](#content-align)
+13. [Collapsed Section](#collapsed-section)
+
 <br>
 
 ## Headings
@@ -14,10 +45,15 @@
     ###### H6 Heading
 
 > # H1 Heading
+>
 > ## H2 Heading
+>
 > ### H3 Heading
+>
 > #### H4 Heading
+>
 > ##### H5 Heading
+>
 > ###### H6 Heading
 
 <br>
@@ -40,14 +76,14 @@ And this is the third line.
 
 ## Styling Text
 
-| Style | Syntax | Output |
-| --- | --- | --- |
-| Bold | `**bold text**` <br> `__bold text__` <br> `this**bold**text`| **bold text** <br> __bold text__ <br> this**bold**text |
-| Italic | `*italicized text*` <br> `_italicized text_` <br> `this*italicized*text`| *italicized text* <br> _italicized text_ <br> this*italicized*text |
-| Strikethrough | `~~strikethrough text~~`| ~~strikethrough text~~ |
-| Bold and Italic | `***important text***` <br> `___important text___` <br> `**this*important*text**`| ***important text*** <br> ___important text___ <br> **this*important*text** |
-| Subscript | `this ~subscript~ text`| this ~subscript~ text |
-| Superscript | `this ^superscript^ text`| this ^superscript^text |
+| Style           | Syntax                                                                            | Output                                                                      |
+| --------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| Bold            | `**bold text**` <br> `__bold text__` <br> `this**bold**text`                      | **bold text** <br> **bold text** <br> this**bold**text                      |
+| Italic          | `*italicized text*` <br> `_italicized text_` <br> `this*italicized*text`          | _italicized text_ <br> _italicized text_ <br> this*italicized*text          |
+| Strikethrough   | `~~strikethrough text~~`                                                          | ~~strikethrough text~~                                                      |
+| Bold and Italic | `***important text***` <br> `___important text___` <br> `**this*important*text**` | **_important text_** <br> **_important text_** <br> **this*important*text** |
+| Subscript       | `this <sub>subscript</sub> text`                                                  | this <sub>subscript</sub> text                                              |
+| Superscript     | `this <sup>superscript</sup> text`                                                | this <sup>superscript</sup> text                                            |
 
 <br>
 
@@ -62,8 +98,10 @@ You can quote text with `>`
     >> text that is a nested quote
 
 text that is not a quote
+
 > text that is a quote
->> text that is a nested quote
+>
+> > text that is a nested quote
 
 ### Quoting Code
 
@@ -101,13 +139,27 @@ git add
 git commit
 ```
 
+### Syntax Highlighting
+
+    ```ruby
+    require 'redcarpet'
+    markdown = Redcarpet.new("Hello World!")
+    puts markdown.to_html
+    ```
+
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
+
 ### Escaping Backticks
 
 If the word or phrase you want to denote as code includes one or more backticks, you can escape it by enclosing the word or phrase in double backticks (``).
 
     ``Use `code` in your Markdown file.``
 
-``Use `code` in your Markdown file.``
+`` Use `code` in your Markdown file. ``
 
 <br>
 
@@ -123,12 +175,12 @@ If the word or phrase you want to denote as code includes one or more backticks,
     2. Indented item
 4. Fourth item
 ```
-   
+
 1. First item
 2. Second item
 3. Third item
-    1. Indented item
-    2. Indented item
+   1. Indented item
+   2. Indented item
 4. Fourth item
 
 ### Unordered Lists
@@ -147,11 +199,11 @@ If the word or phrase you want to denote as code includes one or more backticks,
 - First item
 - Second item
 - Third item
-    - Indented item
-    - Indented item
+  - Indented item
+  - Indented item
 - Fourth item
-    1. Indented item
-    2. Indented item
+  1. Indented item
+  2. Indented item
 
 ### Task Lists
 
@@ -192,8 +244,12 @@ If the word or phrase you want to denote as code includes one or more backticks,
 ### Create A Link
 
 ```
+Visit https://github.com
+
 My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
 ```
+
+Visit https://github.com
 
 My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
 
@@ -208,7 +264,7 @@ My favorite search engine is [Duck Duck Go](https://duckduckgo.com "The best sea
 ### URLs and Email Addresses
 
 ```
-<https://github.com/mfikriam/personal-documentation/blob/main/Markdown.md>  
+<https://github.com/mfikriam/personal-documentation/blob/main/Markdown.md>
 <yapkun17@gmail.com>
 ```
 
@@ -229,20 +285,20 @@ In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, fill
 of worms and an oozy smell, nor yet a dry, bare, sandy hole with nothing in it to sit down on or to
 eat: it was a [hobbit-hole][1], and that means comfort.
 
-[1]: <https://en.wikipedia.org/wiki/Hobbit#Lifestyle> "Hobbit lifestyles"
+[1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle "Hobbit lifestyles"
 
 ### Footnotes
 
 ```
-Here is a simple footnote[^1].  
-A footnote can also have multiple lines[^2].  
+Here is a simple footnote[^1].
+A footnote can also have multiple lines[^2].
 You can also use words, to fit your writing style more closely[^note].
 
 [^1]: My reference.
-[^2]: Every new line should be prefixed with 2 spaces.  
+[^2]: Every new line should be prefixed with 2 spaces.
   This allows you to have a footnote with multiple lines.
 [^note]:
-    Named footnotes will still render with numbers instead of the text but allow easier identification and linking.  
+    Named footnotes will still render with numbers instead of the text but allow easier identification and linking.
     This footnote also has been made with a different syntax using 4 spaces for new lines.
 ```
 
@@ -251,8 +307,10 @@ A footnote can also have multiple lines[^2].
 You can also use words, to fit your writing style more closely[^note].
 
 [^1]: My reference.
-[^2]: Every new line should be prefixed with 2 spaces.  
-  This allows you to have a footnote with multiple lines.
+[^2]:
+    Every new line should be prefixed with 2 spaces.  
+    This allows you to have a footnote with multiple lines.
+
 [^note]:
     Named footnotes will still render with numbers instead of the text but allow easier identification and linking.  
     This footnote also has been made with a different syntax using 4 spaces for new lines.
@@ -265,12 +323,12 @@ You can also use words, to fit your writing style more closely[^note].
 
 [Contribution guidelines for this project](README.md)
 
-| Context | Relative Link |
-| --- | --- |
-| In a `.md` file on the same branch | `/assets/images/electrocat.png` |
-| In a `.md` file on another branch | `/../main/assets/images/electrocat.png` |
-| In issues, pull requests and comments of the repository | `../blob/main/assets/images/electrocat.png?raw=true` |
-| In a `.md` file in another repository | `/../../../../github/docs/blob/main/assets/images/electrocat.png` |
+| Context                                                     | Relative Link                                                          |
+| ----------------------------------------------------------- | ---------------------------------------------------------------------- |
+| In a `.md` file on the same branch                          | `/assets/images/electrocat.png`                                        |
+| In a `.md` file on another branch                           | `/../main/assets/images/electrocat.png`                                |
+| In issues, pull requests and comments of the repository     | `../blob/main/assets/images/electrocat.png?raw=true`                   |
+| In a `.md` file in another repository                       | `/../../../../github/docs/blob/main/assets/images/electrocat.png`      |
 | In issues, pull requests and comments of another repository | `../../../github/docs/blob/main/assets/images/electrocat.png?raw=true` |
 
 <br>
@@ -283,9 +341,11 @@ You can also use words, to fit your writing style more closely[^note].
 _________________
 ```
 
-***
 ---
-_________________
+
+---
+
+---
 
 <br>
 
@@ -335,9 +395,9 @@ Let's rename \*our-new-project\* to \*our-old-project\*.
 ```
 
 | First Header | Second Header |
-| --- | --- |
-| Content Cell | Content Cell |
-| Content Cell | Content Cell |
+| ------------ | ------------- |
+| Content Cell | Content Cell  |
+| Content Cell | Content Cell  |
 
 ### Content Align
 
@@ -349,9 +409,9 @@ Let's rename \*our-new-project\* to \*our-old-project\*.
 ```
 
 | Left-aligned | Center-aligned | Right-aligned |
-| :--- | :---: | ---: |
-| git status   | git status     | git status    |
-| git diff     | git diff       | git diff      |
+| :----------- | :------------: | ------------: |
+| git status   |   git status   |    git status |
+| git diff     |    git diff    |      git diff |
 
 <br>
 
@@ -380,20 +440,3 @@ Let's rename \*our-new-project\* to \*our-old-project\*.
 
 </p>
 </details>
-
-<br>
-
-## Syntax Highlighting
-
-    ```ruby
-    require 'redcarpet'
-    markdown = Redcarpet.new("Hello World!")
-    puts markdown.to_html
-    ```
-
-```ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
-```
-
