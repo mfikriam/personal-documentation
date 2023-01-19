@@ -153,25 +153,37 @@ If the word or phrase you want to denote as code includes one or more backticks,
     1. Indented item
     2. Indented item
 
+### Task Lists
+
+```
+- [x] #739
+- [ ] https://github.com/octo-org/octo-repo/issues/740
+- [ ] Add delight to the experience when all tasks are complete :tada:
+```
+
+- [x] #739
+- [ ] https://github.com/octo-org/octo-repo/issues/740
+- [ ] Add delight to the experience when all tasks are complete :tada:
+
 <br>
 
 ## Images
 
+### Add Image
+
 ```
-1. Open the file containing the sad Pepe.
-2. Marvel at its beauty.
-
-    ![Pepe, the sad frog](/img/markdown/pepe.png)
-
-3. Close the file.
+![Pepe, the sad frog](/img/markdown/pepe.png)
 ```
 
-1. Open the file containing the sad Pepe.
-2. Marvel at its beauty.
+![Pepe, the sad frog](/img/markdown/pepe.png)
 
-    ![Pepe, the sad frog](/img/markdown/pepe.png)
+### Change Image Size
 
-3. Close the file.
+```
+<img src="drawing.jpg" alt="drawing" width="200"/>
+```
+
+<img src="img/markdown/pepe.png" alt="drawing" width="200"/>
 
 <br>
 
@@ -219,6 +231,32 @@ eat: it was a [hobbit-hole][1], and that means comfort.
 
 [1]: <https://en.wikipedia.org/wiki/Hobbit#Lifestyle> "Hobbit lifestyles"
 
+### Footnotes
+
+```
+Here is a simple footnote[^1].  
+A footnote can also have multiple lines[^2].  
+You can also use words, to fit your writing style more closely[^note].
+
+[^1]: My reference.
+[^2]: Every new line should be prefixed with 2 spaces.  
+  This allows you to have a footnote with multiple lines.
+[^note]:
+    Named footnotes will still render with numbers instead of the text but allow easier identification and linking.  
+    This footnote also has been made with a different syntax using 4 spaces for new lines.
+```
+
+Here is a simple footnote[^1].  
+A footnote can also have multiple lines[^2].  
+You can also use words, to fit your writing style more closely[^note].
+
+[^1]: My reference.
+[^2]: Every new line should be prefixed with 2 spaces.  
+  This allows you to have a footnote with multiple lines.
+[^note]:
+    Named footnotes will still render with numbers instead of the text but allow easier identification and linking.  
+    This footnote also has been made with a different syntax using 4 spaces for new lines.
+
 ### Relative links
 
 ```
@@ -226,6 +264,14 @@ eat: it was a [hobbit-hole][1], and that means comfort.
 ```
 
 [Contribution guidelines for this project](README.md)
+
+| Context | Relative Link |
+| --- | --- |
+| In a `.md` file on the same branch | `/assets/images/electrocat.png` |
+| In a `.md` file on another branch | `/../main/assets/images/electrocat.png` |
+| In issues, pull requests and comments of the repository | `../blob/main/assets/images/electrocat.png?raw=true` |
+| In a `.md` file in another repository | `/../../../../github/docs/blob/main/assets/images/electrocat.png` |
+| In issues, pull requests and comments of another repository | `../../../github/docs/blob/main/assets/images/electrocat.png?raw=true` |
 
 <br>
 
@@ -240,3 +286,15 @@ _________________
 ***
 ---
 _________________
+
+<br>
+
+## Using Emojis
+
+```
+:+1: :eyes: :tongue: :angel: :family:
+```
+
+:+1: :eyes: :tongue: :angel: :family:
+
+For a full list of available emoji and codes, check out the [Emoji-Cheat-Sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md).
