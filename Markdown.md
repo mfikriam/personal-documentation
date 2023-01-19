@@ -46,8 +46,8 @@ And this is the third line.
 | Italic | `*italicized text*` <br> `_italicized text_` <br> `this*italicized*text`| *italicized text* <br> _italicized text_ <br> this*italicized*text |
 | Strikethrough | `~~strikethrough text~~`| ~~strikethrough text~~ |
 | Bold and Italic | `***important text***` <br> `___important text___` <br> `**this*important*text**`| ***important text*** <br> ___important text___ <br> **this*important*text** |
-| Subscript | `this <sub>subscript</sub> text`| this <sub>subscript</sub> text |
-| Superscript | `this <sup>superscript</sup> text`| this <sub>superscript</sub> text |
+| Subscript | `this ~subscript~ text`| this ~subscript~ text |
+| Superscript | `this ^superscript^ text`| this ^superscript^text |
 
 <br>
 
@@ -298,3 +298,102 @@ _________________
 :+1: :eyes: :tongue: :angel: :family:
 
 For a full list of available emoji and codes, check out the [Emoji-Cheat-Sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md).
+
+<br>
+
+## Hiding content with comments
+
+```
+<!-- This content will not appear in the rendered Markdown -->
+```
+
+<!-- This content will not appear in the rendered Markdown -->
+
+<br>
+
+## Ignoring Markdown formatting
+
+You can tell GitHub to ignore (or escape) Markdown formatting by using `\` before the Markdown character.
+
+```
+Let's rename \*our-new-project\* to \*our-old-project\*.
+```
+
+Let's rename \*our-new-project\* to \*our-old-project\*.
+
+<br>
+
+## Table
+
+### Creating Table
+
+```
+| First Header | Second Header |
+| --- | --- |
+| Content Cell | Content Cell |
+| Content Cell | Content Cell |
+```
+
+| First Header | Second Header |
+| --- | --- |
+| Content Cell | Content Cell |
+| Content Cell | Content Cell |
+
+### Content Align
+
+```
+| Left-aligned | Center-aligned | Right-aligned |
+| :--- | :---: | ---: |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |
+```
+
+| Left-aligned | Center-aligned | Right-aligned |
+| :--- | :---: | ---: |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |
+
+<br>
+
+## Collapsed Section
+
+    <details><summary>CLICK ME</summary>
+    <p>
+
+    #### We can hide anything, even code!
+
+    ```ruby
+       puts "Hello World"
+    ```
+
+    </p>
+    </details>
+
+<details><summary>CLICK ME</summary>
+<p>
+
+#### We can hide anything, even code!
+
+```ruby
+   puts "Hello World"
+```
+
+</p>
+</details>
+
+<br>
+
+## Syntax Highlighting
+
+    ```ruby
+    require 'redcarpet'
+    markdown = Redcarpet.new("Hello World!")
+    puts markdown.to_html
+    ```
+
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
+
